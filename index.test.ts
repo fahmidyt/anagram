@@ -16,6 +16,18 @@ describe("Testing Anagram", () => {
     expect(Array.isArray(result[0])).toEqual(true)
   })
 
+  it("Should Ignore case of the letters and should doesn't affect the comparison.", () => {
+    const anagrams = ['aKu', 'Kua', 'kUa']
+
+    const result = anagram(anagrams)
+
+    expect(result.length).toEqual(1)
+    expect(Array.isArray(result[0])).toEqual(true)
+    expect(result[0].length).toEqual(3)
+
+    expect((result[0] as string[]).sort()).toEqual(anagrams.sort())
+  })
+
   it("Should return correct values when it has anagram", () => {
     const result = anagram(['aku', 'kua', 'kamu', 'muka'])
 
