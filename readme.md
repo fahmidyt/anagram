@@ -33,4 +33,7 @@ I also add unit test in this project.
 You could run it by simply execute this command: `npm run test` or `yarn test`
 
 ## Build Project
-TODO
+If you wanna build project into js files..
+you could execute this command `npm run build` or `yarn build`
+then it will automaticly create new folder called `dist`.
+From that, you just need to runs it with node by simply run `node ./dist/index.js`
