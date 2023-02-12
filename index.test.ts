@@ -1,7 +1,6 @@
 import anagram from "./index";
 
 describe("Testing Anagram", () => {
-  it("Should throw error when prop anagrams is not an array", () => {});
 
   it("Should return empty array when anagrams list is empty", () => {});
 
