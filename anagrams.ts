@@ -10,20 +10,14 @@ export default function anagram(lists: string[]): string[] | string[][] {
         let keyword = newLists.shift() as string
         correctAnagram.push(keyword)
 
-        // we cast all into lowercase, then sort alphabetically
-        keyword = keyword.toLowerCase().split('').sort().join('')
-
+        // we cast all into lowercase, then sort alphabetically, also ignore whitespaces
+        keyword = keyword.toLowerCase().split('').sort().join('').replace(/\s+/g,'')
         
         for (let i = 0; i < newLists.length; i++) {
-            let text = newLists[i]
-
+            // do same on text like keyword
+            let text = newLists[i].toLocaleLowerCase().replace(/\s+/g,'').split('').sort().join('')
 
             if (keyword.length !== text.length) continue
-
-            // do same on text like keyword
-            text = text.toLocaleLowerCase().split('').sort().join('')
-
-
             if (keyword !== text) continue
 
             // on this next line we will do some logic when it's anagram
