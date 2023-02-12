@@ -1,4 +1,4 @@
-import anagram from "./index";
+import anagram from "./anagrams";
 
 describe("Testing Anagram", () => {
   it("Should return empty array when anagrams list is empty", () => {
