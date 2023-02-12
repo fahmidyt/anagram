@@ -6,9 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node index.ts",
+    "build": "babel *.ts --out-dir dist --extensions \".ts\",\".js\"",
     "test": "tsc --noEmit && jest"
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-typescript": "^7.20.13",
     "@babel/preset-env": "^7.20.2",
